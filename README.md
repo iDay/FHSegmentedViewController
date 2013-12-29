@@ -22,6 +22,7 @@ FHSegmentedViewController
 ## Getting Started
 
 1. Create a subclass of `FHSegmentedViewController` in your project
+
 ````objective-c
 #import "FHSegmentedViewController.h"
 
@@ -29,6 +30,7 @@ FHSegmentedViewController
 ````
 
 2.Implement `- (void)awakeFromNib`
+
 ````objective-c
 - (void)viewDidLoad
 {
@@ -39,8 +41,9 @@ FHSegmentedViewController
 ````
 
 3. Push an instance of `AnotherViewController`.
+
 ````objective-c
-UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"firstSubViewController"];
+    UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"firstSubViewController"];
     [self pushViewController:viewController title:@"anotherViewController"];
 ````
 
