@@ -29,7 +29,7 @@ FHSegmentedViewController
 @interface MasterViewController : FHSegmentedViewController
 ````
 
-2.Implement `- (void)awakeFromNib`
+2.Implement `- (void)viewDidLoad`
 
 ````objective-c
 - (void)viewDidLoad
