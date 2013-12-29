@@ -25,26 +25,16 @@
         <scene sceneID="H2V-FC-T65">
             <objects>
                 <viewController id="eaZ-hG-NL0" customClass="MasterViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fAT-xs-pqh"/>
-                        <viewControllerLayoutGuide type="bottom" id="Gh1-UG-5gM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Wlw-U5-Vfp">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
                     <navigationItem key="navigationItem" id="oIs-Xy-dVy"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6t-IB-YYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="456" y="64"/>
         </scene>
-        <!--Detail View Controller - First View Controller-->
+        <!--Detail View Controller - First-->
         <scene sceneID="Cn3-H9-jdl">
             <objects>
-                <viewController storyboardIdentifier="firstSubViewController" title="First View Controller" id="Ah7-4n-0Wa" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="firstSubViewController" title="First" id="Ah7-4n-0Wa" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NHL-Cv-TYA"/>
                         <viewControllerLayoutGuide type="bottom" id="c8a-6F-Cub"/>
@@ -77,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="902" y="64"/>
         </scene>
-        <!--Detail View Controller - Second View Controller-->
+        <!--Detail View Controller - Second-->
         <scene sceneID="9rW-qi-aVf">
             <objects>
-                <viewController storyboardIdentifier="secondSubViewController" title="Second View Controller" id="oeJ-Hm-qTK" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="secondSubViewController" title="Second" id="oeJ-Hm-qTK" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5ee-Xb-T1M"/>
                         <viewControllerLayoutGuide type="bottom" id="6dk-qg-x3l"/>

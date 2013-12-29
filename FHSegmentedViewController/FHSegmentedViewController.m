@@ -50,12 +50,9 @@
         return;
     }
     for (int i = 0; i < [viewControllers count]; i++) {
-        UIViewController *viewController = viewControllers[i];
-        [self addChildViewController:viewController];
-        [_segmentedControl insertSegmentWithTitle:titles[i] atIndex:i animated:NO];
+        [self pushViewController:viewControllers[i] title:titles[i]];
     }
     [_segmentedControl setSelectedSegmentIndex:0];
-    [_segmentedControl sizeToFit];
     self.selectedViewControllerIndex = 0;
 }
 
@@ -65,13 +62,21 @@
         return;
     }
     for (int i = 0; i < [viewControllers count]; i++) {
-        UIViewController *viewController = viewControllers[i];
-        [self addChildViewController:viewController];
-        [_segmentedControl insertSegmentWithTitle:viewController.title atIndex:i animated:NO];
+        [self pushViewController:viewControllers[i] title:[viewControllers[i] title]];
     }
     [_segmentedControl setSelectedSegmentIndex:0];
-    [_segmentedControl sizeToFit];
     self.selectedViewControllerIndex = 0;
+}
+
+- (void)pushViewController:(UIViewController *)viewController
+{
+    [self pushViewController:viewController title:viewController.title];
+}
+- (void)pushViewController:(UIViewController *)viewController title:(NSString *)title
+{
+    [_segmentedControl insertSegmentWithTitle:title atIndex:_segmentedControl.numberOfSegments animated:NO];
+    [self addChildViewController:viewController];
+    [_segmentedControl sizeToFit];
 }
 
 - (void)segmentedControlSelected:(id)sender
@@ -90,6 +95,7 @@
             }
             CGRect frame = self.view.frame;
             [_selectedViewController view].frame = CGRectMake(frame.origin.x, frame.origin.y - deltaTop, frame.size.width, frame.size.height);
+//            [[_selectedViewController view] sizeToFit];
         } else {
             [_selectedViewController view].frame = self.view.frame;
         }

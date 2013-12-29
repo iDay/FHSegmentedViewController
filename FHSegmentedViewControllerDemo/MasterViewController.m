@@ -26,6 +26,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addSubViewController:)];
 
     [self setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"firstSubViewController"], [self.storyboard instantiateViewControllerWithIdentifier:@"secondSubViewController"]]];
 }
@@ -36,6 +38,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (void)addSubViewController:(id)sender
+{
+    UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"firstSubViewController"];
+    [self pushViewController:viewController title:@"New"];
+}
 
 @end

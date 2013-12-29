@@ -16,5 +16,7 @@
 
 - (void)setViewControllers:(NSArray *)viewControllers;
 - (void)setViewControllers:(NSArray *)viewControllers titles:(NSArray *)titles;
+- (void)pushViewController:(UIViewController *)viewController;
+- (void)pushViewController:(UIViewController *)viewController title:(NSString *)title;
 
 @end
