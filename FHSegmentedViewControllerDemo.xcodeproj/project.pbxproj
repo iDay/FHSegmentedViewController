@@ -22,9 +22,9 @@
 		6465DC22186FB53700094CF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6465DC01186FB53700094CF1 /* UIKit.framework */; };
 		6465DC2A186FB53700094CF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6465DC28186FB53700094CF1 /* InfoPlist.strings */; };
 		6465DC2C186FB53700094CF1 /* FHSegmentedViewControllerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6465DC2B186FB53700094CF1 /* FHSegmentedViewControllerDemoTests.m */; };
-		6465DC38186FB5DE00094CF1 /* FHSegmentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6465DC37186FB5DE00094CF1 /* FHSegmentedViewController.m */; };
 		6465DC3B186FC36600094CF1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6465DC39186FC36600094CF1 /* LICENSE */; };
 		6465DC3C186FC36600094CF1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6465DC3A186FC36600094CF1 /* README.md */; };
+		6465DC40186FC58A00094CF1 /* FHSegmentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6465DC3F186FC58A00094CF1 /* FHSegmentedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,10 +59,10 @@
 		6465DC27186FB53700094CF1 /* FHSegmentedViewControllerDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FHSegmentedViewControllerDemoTests-Info.plist"; sourceTree = "<group>"; };
 		6465DC29186FB53700094CF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6465DC2B186FB53700094CF1 /* FHSegmentedViewControllerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FHSegmentedViewControllerDemoTests.m; sourceTree = "<group>"; };
-		6465DC36186FB5DE00094CF1 /* FHSegmentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHSegmentedViewController.h; sourceTree = "<group>"; };
-		6465DC37186FB5DE00094CF1 /* FHSegmentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSegmentedViewController.m; sourceTree = "<group>"; };
 		6465DC39186FC36600094CF1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6465DC3A186FC36600094CF1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		6465DC3E186FC58A00094CF1 /* FHSegmentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHSegmentedViewController.h; sourceTree = "<group>"; };
+		6465DC3F186FC58A00094CF1 /* FHSegmentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSegmentedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +92,9 @@
 		6465DBF1186FB53700094CF1 = {
 			isa = PBXGroup;
 			children = (
+				6465DC3D186FC58A00094CF1 /* FHSegmentedViewController */,
 				6465DC39186FC36600094CF1 /* LICENSE */,
 				6465DC3A186FC36600094CF1 /* README.md */,
-				6465DC35186FB5DE00094CF1 /* FHSegementedViewController */,
 				6465DC03186FB53700094CF1 /* FHSegmentedViewControllerDemo */,
 				6465DC25186FB53700094CF1 /* FHSegmentedViewControllerDemoTests */,
 				6465DBFC186FB53700094CF1 /* Frameworks */,
@@ -167,13 +167,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6465DC35186FB5DE00094CF1 /* FHSegementedViewController */ = {
+		6465DC3D186FC58A00094CF1 /* FHSegmentedViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6465DC36186FB5DE00094CF1 /* FHSegmentedViewController.h */,
-				6465DC37186FB5DE00094CF1 /* FHSegmentedViewController.m */,
+				6465DC3E186FC58A00094CF1 /* FHSegmentedViewController.h */,
+				6465DC3F186FC58A00094CF1 /* FHSegmentedViewController.m */,
 			);
-			path = FHSegementedViewController;
+			path = FHSegmentedViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6465DC38186FB5DE00094CF1 /* FHSegmentedViewController.m in Sources */,
+				6465DC40186FC58A00094CF1 /* FHSegmentedViewController.m in Sources */,
 				6465DC0E186FB53700094CF1 /* AppDelegate.m in Sources */,
 				6465DC14186FB53700094CF1 /* MasterViewController.m in Sources */,
 				6465DC0A186FB53700094CF1 /* main.m in Sources */,
