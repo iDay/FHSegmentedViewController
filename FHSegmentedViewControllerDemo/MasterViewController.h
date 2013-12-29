@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FHSegmentedViewController.h"
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : FHSegmentedViewController
 
 @end
