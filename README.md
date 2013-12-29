@@ -1,2 +1,2 @@
-FHSegementedViewController
+FHSegmentedViewController
 ==========================
