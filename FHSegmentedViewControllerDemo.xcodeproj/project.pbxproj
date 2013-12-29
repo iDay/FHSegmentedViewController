@@ -25,6 +25,9 @@
 		6465DC3B186FC36600094CF1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6465DC39186FC36600094CF1 /* LICENSE */; };
 		6465DC3C186FC36600094CF1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6465DC3A186FC36600094CF1 /* README.md */; };
 		6465DC40186FC58A00094CF1 /* FHSegmentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6465DC3F186FC58A00094CF1 /* FHSegmentedViewController.m */; };
+		6465DC44186FFFC500094CF1 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6465DC41186FFFC500094CF1 /* 1.png */; };
+		6465DC45186FFFC500094CF1 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6465DC42186FFFC500094CF1 /* 2.png */; };
+		6465DC46186FFFC500094CF1 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6465DC43186FFFC500094CF1 /* 3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		6465DC3A186FC36600094CF1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		6465DC3E186FC58A00094CF1 /* FHSegmentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHSegmentedViewController.h; sourceTree = "<group>"; };
 		6465DC3F186FC58A00094CF1 /* FHSegmentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSegmentedViewController.m; sourceTree = "<group>"; };
+		6465DC41186FFFC500094CF1 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		6465DC42186FFFC500094CF1 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		6465DC43186FFFC500094CF1 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +99,12 @@
 			isa = PBXGroup;
 			children = (
 				6465DC3D186FC58A00094CF1 /* FHSegmentedViewController */,
+				6465DC03186FB53700094CF1 /* FHSegmentedViewControllerDemo */,
+				6465DC41186FFFC500094CF1 /* 1.png */,
+				6465DC42186FFFC500094CF1 /* 2.png */,
+				6465DC43186FFFC500094CF1 /* 3.png */,
 				6465DC39186FC36600094CF1 /* LICENSE */,
 				6465DC3A186FC36600094CF1 /* README.md */,
-				6465DC03186FB53700094CF1 /* FHSegmentedViewControllerDemo */,
 				6465DC25186FB53700094CF1 /* FHSegmentedViewControllerDemoTests */,
 				6465DBFC186FB53700094CF1 /* Frameworks */,
 				6465DBFB186FB53700094CF1 /* Products */,
@@ -254,7 +263,10 @@
 			files = (
 				6465DC19186FB53700094CF1 /* Images.xcassets in Resources */,
 				6465DC08186FB53700094CF1 /* InfoPlist.strings in Resources */,
+				6465DC45186FFFC500094CF1 /* 2.png in Resources */,
+				6465DC46186FFFC500094CF1 /* 3.png in Resources */,
 				6465DC3C186FC36600094CF1 /* README.md in Resources */,
+				6465DC44186FFFC500094CF1 /* 1.png in Resources */,
 				6465DC3B186FC36600094CF1 /* LICENSE in Resources */,
 				6465DC11186FB53700094CF1 /* Main.storyboard in Resources */,
 			);
