@@ -56,6 +56,28 @@
     self.selectedViewControllerIndex = 0;
 }
 
+- (void)setViewControllers:(NSArray *)viewControllers imagesNamed:(NSArray *)imageNames {
+	if ([_segmentedControl numberOfSegments] > 0) {
+		return;
+	}
+	for (int i = 0; i < [viewControllers count]; i++) {
+		[self pushViewController:viewControllers[i] imageNamed:imageNames[i]];
+	}
+	[_segmentedControl setSelectedSegmentIndex:0];
+	self.selectedViewControllerIndex = 0;
+}
+
+- (void)setViewControllers:(NSArray *)viewControllers images:(NSArray *)images {
+	if ([_segmentedControl numberOfSegments] > 0) {
+		return;
+	}
+	for (int i = 0; i < [viewControllers count]; i++) {
+		[self pushViewController:viewControllers[i] image:images[i]];
+	}
+	[_segmentedControl setSelectedSegmentIndex:0];
+	self.selectedViewControllerIndex = 0;
+}
+
 - (void)setViewControllers:(NSArray *)viewControllers
 {
     if ([_segmentedControl numberOfSegments] > 0) {
@@ -79,6 +101,19 @@
     [_segmentedControl sizeToFit];
 }
 
+- (void)pushViewController:(UIViewController *)viewController imageNamed:(NSString *)imageName
+{
+	[_segmentedControl insertSegmentWithImage:[UIImage imageNamed:imageName] atIndex:_segmentedControl.numberOfSegments animated:NO];
+	[self addChildViewController:viewController];
+	[_segmentedControl sizeToFit];
+}
+
+- (void)pushViewController:(UIViewController *)viewController image:(UIImage *)image {
+	[_segmentedControl insertSegmentWithImage:image atIndex:_segmentedControl.numberOfSegments animated:NO];
+	[self addChildViewController:viewController];
+	[_segmentedControl sizeToFit];
+}
+
 - (void)segmentedControlSelected:(id)sender
 {
     self.selectedViewControllerIndex = _segmentedControl.selectedSegmentIndex;
@@ -95,7 +130,7 @@
             }
             CGRect frame = self.view.frame;
             [_selectedViewController view].frame = CGRectMake(frame.origin.x, frame.origin.y - deltaTop, frame.size.width, frame.size.height);
-//            [[_selectedViewController view] sizeToFit];
+			//            [[_selectedViewController view] sizeToFit];
         } else {
             [_selectedViewController view].frame = self.view.frame;
         }
