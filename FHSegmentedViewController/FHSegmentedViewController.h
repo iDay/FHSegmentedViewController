@@ -16,7 +16,11 @@
 
 - (void)setViewControllers:(NSArray *)viewControllers;
 - (void)setViewControllers:(NSArray *)viewControllers titles:(NSArray *)titles;
+- (void)setViewControllers:(NSArray *)viewControllers imagesNamed:(NSArray *)imageNames;
+- (void)setViewControllers:(NSArray *)viewControllers images:(NSArray *)images;
 - (void)pushViewController:(UIViewController *)viewController;
 - (void)pushViewController:(UIViewController *)viewController title:(NSString *)title;
+- (void)pushViewController:(UIViewController *)viewController imageNamed:(NSString *)imageName;
+- (void)pushViewController:(UIViewController *)viewController image:(UIImage *)image;
 
 @end
