@@ -101,7 +101,7 @@
         }
         [self.view addSubview:[_selectedViewController view]];
         [_selectedViewController didMoveToParentViewController:self];
-    } else {
+    } else if (index != _selectedViewControllerIndex) {
         if ([[UIDevice currentDevice].systemVersion floatValue] < 7.0f) {
             [self.childViewControllers[index] view].frame = self.view.frame;
         }
