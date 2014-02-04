@@ -137,7 +137,7 @@
         [self.selectedViewController view].frame = CGRectMake(0, 0, containerFrame.size.width, containerFrame.size.height);
         [_viewContainer addSubview:[_selectedViewController view]];
         [_selectedViewController didMoveToParentViewController:self];
-        [self.selectedViewController viewDidAppear:YES];
+        [_selectedViewController viewDidAppear:YES];
     } else if (index != _selectedViewControllerIndex) {
         [self transitionFromViewController:_selectedViewController toViewController:self.childViewControllers[index] duration:0.0f options:UIViewAnimationOptionTransitionNone animations:nil completion:^(BOOL finished) {
             _selectedViewController = self.childViewControllers[index];
