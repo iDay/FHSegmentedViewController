@@ -8,7 +8,9 @@
 
 #import "FHSegmentedViewController.h"
 
-@interface FHSegmentedViewController ()
+@interface FHSegmentedViewController () {
+    CGRect containerFrame;
+}
 
 @end
 
@@ -36,12 +38,21 @@
         [_segmentedControl removeAllSegments];
     }
     [_segmentedControl addTarget:self action:@selector(segmentedControlSelected:) forControlEvents:UIControlEventValueChanged];
+    if (!_viewContainer) {
+        [self setViewContainer:self.view];
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setViewContainer:(UIView *)viewContainer
+{
+    _viewContainer = viewContainer;
+    containerFrame = _viewContainer.frame;
 }
 
 - (void)setViewControllers:(NSArray *)viewControllers titles:(NSArray *)titles
@@ -123,25 +134,14 @@
 {
     if (!_selectedViewController) {
         _selectedViewController = self.childViewControllers[index];
-        if ([[UIDevice currentDevice].systemVersion floatValue] < 7.0f) {
-            CGFloat deltaTop = 20.0f;
-            if (self.navigationController && !self.navigationController.navigationBar.translucent) {
-                deltaTop = self.navigationController.navigationBar.frame.size.height;
-            }
-            CGRect frame = self.view.frame;
-            [_selectedViewController view].frame = CGRectMake(frame.origin.x, frame.origin.y - deltaTop, frame.size.width, frame.size.height);
-			//            [[_selectedViewController view] sizeToFit];
-        } else {
-            [_selectedViewController view].frame = self.view.frame;
-        }
-        [self.view addSubview:[_selectedViewController view]];
+        [self.selectedViewController view].frame = CGRectMake(0, 0, containerFrame.size.width, containerFrame.size.height);
+        [_viewContainer addSubview:[_selectedViewController view]];
         [_selectedViewController didMoveToParentViewController:self];
+        [self.selectedViewController viewDidAppear:YES];
     } else if (index != _selectedViewControllerIndex) {
-        if ([[UIDevice currentDevice].systemVersion floatValue] < 7.0f) {
-            [self.childViewControllers[index] view].frame = self.view.frame;
-        }
         [self transitionFromViewController:_selectedViewController toViewController:self.childViewControllers[index] duration:0.0f options:UIViewAnimationOptionTransitionNone animations:nil completion:^(BOOL finished) {
             _selectedViewController = self.childViewControllers[index];
+            _selectedViewController.view.frame = CGRectMake(0, 0, containerFrame.size.width, containerFrame.size.height);
             _selectedViewControllerIndex = index;
         }];
     }

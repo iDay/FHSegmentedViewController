@@ -12,6 +12,7 @@
 
 @property(nonatomic, assign) UIViewController *selectedViewController;
 @property(nonatomic, strong) IBOutlet UISegmentedControl *segmentedControl;
+@property(nonatomic, strong) IBOutlet UIView *viewContainer;
 @property(nonatomic, assign) NSInteger selectedViewControllerIndex;
 
 - (void)setViewControllers:(NSArray *)viewControllers;

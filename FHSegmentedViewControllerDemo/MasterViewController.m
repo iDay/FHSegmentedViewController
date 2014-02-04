@@ -33,6 +33,12 @@
     [self setSelectedViewControllerIndex:0];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"%@", @"viewDidAppear here.");
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
