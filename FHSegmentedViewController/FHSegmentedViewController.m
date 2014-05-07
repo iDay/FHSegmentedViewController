@@ -24,6 +24,13 @@
     }
     return self;
 }
+	
+- (void)viewDidLayoutSubviews
+{
+	for (UIViewController *childViewController in self.childViewControllers) {
+		childViewController.view.frame = self.view.frame;
+	}
+}
 
 - (void)viewDidLoad
 {
