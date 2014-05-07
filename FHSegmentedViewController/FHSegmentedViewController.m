@@ -152,6 +152,8 @@
             _selectedViewControllerIndex = index;
         }];
     }
+	
+	[_segmentedControl setSelectedSegmentIndex:index];
 }
 
 @end
