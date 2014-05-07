@@ -27,9 +27,15 @@
 	
 - (void)viewDidLayoutSubviews
 {
+	[super viewDidLayoutSubviews];
+	
+	containerFrame = (CGRect){0,0,self.view.frame.size};
+	
 	for (UIViewController *childViewController in self.childViewControllers) {
-		childViewController.view.frame = self.view.frame;
+		childViewController.view.frame = (CGRect){0,0,containerFrame.size};
 	}
+	
+//	[self.selectedViewController view].frame = CGRectMake(0, 0, containerFrame.size.width, containerFrame.size.height);
 }
 
 - (void)viewDidLoad
