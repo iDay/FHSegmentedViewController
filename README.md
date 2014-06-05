@@ -47,3 +47,24 @@ FHSegmentedViewController
     [self pushViewController:viewController title:@"anotherViewController"];
 ````
 
+
+Note: If the view controller you want to present is a UITableViewController you have to override ```didMoveToParentViewController:```in it with this:
+
+````objective-c
+    - (void)didMoveToParentViewController:(UIViewController *)parent
+    {
+        if (parent) {
+            CGFloat top = parent.topLayoutGuide.length;
+            CGFloat bottom = parent.bottomLayoutGuide.length;
+
+            if (self.tableView.contentInset.top != top) {
+                UIEdgeInsets newInsets = UIEdgeInsetsMake(top, 0, bottom, 0);
+                self.tableView.contentInset = newInsets;
+                self.tableView.scrollIndicatorInsets = newInsets;
+            }
+        }
+
+        [super didMoveToParentViewController:parent];
+    }
+````
+
