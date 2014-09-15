@@ -140,17 +140,23 @@
     self.selectedViewControllerIndex = _segmentedControl.selectedSegmentIndex;
 }
 
+- (void)selecteViewController:(NSInteger)index
+{
+    _selectedViewController = self.childViewControllers[index];
+    [_selectedViewController didMoveToParentViewController:self];
+    self.navigationItem.rightBarButtonItem = _selectedViewController.navigationItem.rightBarButtonItem;
+    self.navigationItem.leftBarButtonItem = _selectedViewController.navigationItem.leftBarButtonItem;
+    _selectedViewControllerIndex = index;
+}
+
 - (void)setSelectedViewControllerIndex:(NSInteger)index
 {
     if (!_selectedViewController) {
-        _selectedViewController = self.childViewControllers[index];
+        [self selecteViewController:index];
         [_viewContainer addSubview:[_selectedViewController view]];
-        [_selectedViewController didMoveToParentViewController:self];
     } else if (index != _selectedViewControllerIndex) {
         [self transitionFromViewController:_selectedViewController toViewController:self.childViewControllers[index] duration:0.0f options:UIViewAnimationOptionTransitionNone animations:nil completion:^(BOOL finished) {
-            _selectedViewController = self.childViewControllers[index];
-            [_selectedViewController didMoveToParentViewController:self];
-            _selectedViewControllerIndex = index;
+            [self selecteViewController:index];
         }];
     }
 	
