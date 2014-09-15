@@ -149,6 +149,7 @@
     } else if (index != _selectedViewControllerIndex) {
         [self transitionFromViewController:_selectedViewController toViewController:self.childViewControllers[index] duration:0.0f options:UIViewAnimationOptionTransitionNone animations:nil completion:^(BOOL finished) {
             _selectedViewController = self.childViewControllers[index];
+            [_selectedViewController didMoveToParentViewController:self];
             _selectedViewControllerIndex = index;
         }];
     }
