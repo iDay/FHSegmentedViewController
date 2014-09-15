@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		641DB6E819C66FFE0036C010 /* FHSegmentedViewController.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = 641DB6E719C66FFE0036C010 /* FHSegmentedViewController.podspec.json */; };
 		6465DBFE186FB53700094CF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6465DBFD186FB53700094CF1 /* Foundation.framework */; };
 		6465DC00186FB53700094CF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6465DBFF186FB53700094CF1 /* CoreGraphics.framework */; };
 		6465DC02186FB53700094CF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6465DC01186FB53700094CF1 /* UIKit.framework */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		641DB6E719C66FFE0036C010 /* FHSegmentedViewController.podspec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FHSegmentedViewController.podspec.json; sourceTree = "<group>"; };
 		6465DBFA186FB53700094CF1 /* FHSegmentedViewControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FHSegmentedViewControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6465DBFD186FB53700094CF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6465DBFF186FB53700094CF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -98,6 +100,7 @@
 		6465DBF1186FB53700094CF1 = {
 			isa = PBXGroup;
 			children = (
+				641DB6E719C66FFE0036C010 /* FHSegmentedViewController.podspec.json */,
 				6465DC3D186FC58A00094CF1 /* FHSegmentedViewController */,
 				6465DC03186FB53700094CF1 /* FHSegmentedViewControllerDemo */,
 				6465DC41186FFFC500094CF1 /* 1.png */,
@@ -266,6 +269,7 @@
 				6465DC45186FFFC500094CF1 /* 2.png in Resources */,
 				6465DC46186FFFC500094CF1 /* 3.png in Resources */,
 				6465DC3C186FC36600094CF1 /* README.md in Resources */,
+				641DB6E819C66FFE0036C010 /* FHSegmentedViewController.podspec.json in Resources */,
 				6465DC44186FFFC500094CF1 /* 1.png in Resources */,
 				6465DC3B186FC36600094CF1 /* LICENSE in Resources */,
 				6465DC11186FB53700094CF1 /* Main.storyboard in Resources */,
