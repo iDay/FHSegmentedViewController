@@ -144,8 +144,12 @@
 {
     _selectedViewController = self.childViewControllers[index];
     [_selectedViewController didMoveToParentViewController:self];
-    self.navigationItem.rightBarButtonItem = _selectedViewController.navigationItem.rightBarButtonItem;
-    self.navigationItem.leftBarButtonItem = _selectedViewController.navigationItem.leftBarButtonItem;
+    if (_selectedViewController.navigationItem.rightBarButtonItem) {
+        self.navigationItem.rightBarButtonItem = _selectedViewController.navigationItem.rightBarButtonItem;
+    }
+    if (_selectedViewController.navigationItem.leftBarButtonItem) {
+        self.navigationItem.leftBarButtonItem = _selectedViewController.navigationItem.leftBarButtonItem;
+    }
     _selectedViewControllerIndex = index;
 }
 
