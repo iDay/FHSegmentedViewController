@@ -1,6 +1,6 @@
 {
   "name": "FHSegmentedViewController",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "summary": "Custom view controller container for swiching sub view controller with a segmented control",
   "homepage": "https://github.com/iDay/FHSegmentedViewController",
   "screenshots": [
@@ -20,7 +20,7 @@
   },
   "source": {
     "git": "https://github.com/iDay/FHSegmentedViewController.git",
-    "tag": "1.2.3"
+    "tag": "1.2.4"
   },
   "source_files": "FHSegmentedViewController",
   "requires_arc": true
