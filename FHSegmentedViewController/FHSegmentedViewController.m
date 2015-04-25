@@ -140,7 +140,7 @@
     self.selectedViewControllerIndex = _segmentedControl.selectedSegmentIndex;
 }
 
-- (void)selecteViewController:(NSInteger)index
+- (void)selectViewController:(NSInteger)index
 {
     _selectedViewController = self.childViewControllers[index];
     [_selectedViewController didMoveToParentViewController:self];
@@ -156,11 +156,11 @@
 - (void)setSelectedViewControllerIndex:(NSInteger)index
 {
     if (!_selectedViewController) {
-        [self selecteViewController:index];
+        [self selectViewController:index];
         [_viewContainer addSubview:[_selectedViewController view]];
     } else if (index != _selectedViewControllerIndex) {
         [self transitionFromViewController:_selectedViewController toViewController:self.childViewControllers[index] duration:0.0f options:UIViewAnimationOptionTransitionNone animations:nil completion:^(BOOL finished) {
-            [self selecteViewController:index];
+            [self selectViewController:index];
         }];
     }
 	
